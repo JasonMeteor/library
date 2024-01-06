@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Library - List of all books
+{% endblock %}
+
+
+{% block content %}
+
+  <h1>Books</h1>
+  
+  <ul>
+    {% for x in mybooks %}
+      <li><a href="book_details/{{ x.id }}">{{ x.bookname }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
