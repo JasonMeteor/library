@@ -1,15 +1,31 @@
 {% extends "master.html" %}
+{% load static %}
 
 {% block title %}
-  Library
+  阿里山森林圖書館
 {% endblock %}
 
-
 {% block content %}
-  <h1>Library</h1>
+<link rel="stylesheet" href="{% static '/css/mainpage.css' %}">
 
-  <h3>Books</h3>
-  
-  <p>Check out all our <a href="books/">books</a></p>
-  
+<!-- 主要書的展示區域 -->
+<div class="card">
+  <div class="card-header">
+    書的展示區域
+  </div>
+  <div class="card-body">
+    
+    <div class="card">
+      <img src= {% static '/img/遊戲人生01封面.jpg' %} class="card-img-top" alt="遊戲人生01封面">
+      <div class="card-body">
+        <h5 class="card-title">遊戲人生01</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 的 JavaScript 插件 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 {% endblock %}
