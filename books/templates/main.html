@@ -16,11 +16,30 @@
   <div class="card-body">
     
     <div class="card">
-      <img src= {% static '/img/遊戲人生01封面.jpg' %} class="card-img-top" alt="遊戲人生01封面">
+      <img src= {{ book1.photo.url }} class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">遊戲人生01</h5>
+        <h5 class="col-sm-5">{{ book1.bookname }} 評價：{{ book1.rate }}/10</h5>
       </div>
     </div>
+    <div class="card">
+      <img src= {{ book2.photo.url }} class="card-img-top">
+      <div class="card-body">
+        <h5 class="col-sm-5">{{ book2.bookname }} 評價：{{ book2.rate }}/10</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img src= {{ book3.photo.url }} class="card-img-top">
+      <div class="card-body">
+        <h5 class="col-sm-5">{{ book3.bookname }} 評價：{{ book3.rate }}/10</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img src= {{ book4.photo.url }} class="card-img-top">
+      <div class="card-body">
+        <h5 class="col-sm-5">{{ book4.bookname }} 評價：{{ book4.rate }}/10</h5>
+      </div>
+    </div>
+
   </div>
 </div>
 

@@ -11,32 +11,30 @@
 
 <body>
   <div class="image-container">
-    <img class="col-sm-12 h-100" src="Pokemon.jpg" alt="homepicture">
-    <h1 class="image-text">阿里山森林圖書館</h1>
-  </div>
-  
-  <!-- 搜尋框 -->
-  <div class="search-bar">
-    <input type="text" class="form-control" placeholder="搜尋書籍...">
+    <img class="col-sm-12 img-fluid" src={% static '/img/Alishan.png' %} alt="homepicture" style="max-height: 20rem;">
+    <h1 class="image-text text-dark mt-3" style="font-size: 50px;">阿里山森林圖書館</h1>
   </div>
   
   <!-- 功能列表 -->
-  <div class="card">
+  <div class="card mb-4">
     <div class="card-header">
       功能列表
     </div>
     <div class="card-body">
       <form>
-        <button type="submit" class="btn btn-primary">借書</button>
+        <a href="/" class="btn btn-linking mb-2">回首頁</a>
       </form>
       <form>
-        <button type="submit" class="btn btn-success">還書</button>
+        <a href="/borrow" class="btn btn-primary mb-2">借書</a>
       </form>
       <form>
-        <button type="submit" class="btn btn-info">查詢借閱紀錄</button>
+        <a href="/return_book" class="btn btn-success mb-2">還書</a>
       </form>
       <form>
-        <a href="/books" class="btn btn-warning">查詢書庫</a>
+        <a href="/" class="btn btn-info mb-2">查詢借閱紀錄</a>
+      </form>
+      <form>
+        <a href="/books" class="btn btn-warning mb-2">查詢書庫</a>
       </form>
     </div>
   </div>
