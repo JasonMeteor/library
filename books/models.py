@@ -19,6 +19,7 @@ class Book(models.Model):
   author = models.CharField(default = "No Name", max_length = 50)
   type = models.CharField(max_length=1, choices=BOOK_TYPE, default = "0")
   lastQuantity = models.IntegerField(default = 1)
+  maxQuantity = models.IntegerField(default = 1)
   rate = models.FloatField(default = 0.0)
 
   photo = models.ImageField(upload_to='book_photos/', null=True, blank=True)

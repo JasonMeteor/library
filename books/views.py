@@ -63,11 +63,14 @@ def return_book(request):
       book = Book.objects.get(ISBN=isbn)
       b_title = book.bookname
 
-      book.lastQuantity += 1
-      book.save()
+      if book.lastQuantity < book.maxQuantity:
+        book.lastQuantity += 1
+        book.save()
 
-      message = f'已歸還《{b_title}》'
-      return render(request, 'return_book.html', {'success': message})
+        message = f'已歸還《{b_title}》'
+        return render(request, 'return_book.html', {'success': message})
+      else:
+         return render(request, 'return_book.html', {'error': '本館所持有的此書已全數歸還'})
 
     except Book.DoesNotExist:
       return render(request, 'return_book.html', {'error': '書籍不存在'})
