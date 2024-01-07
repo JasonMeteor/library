@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'books'
+    'books',
+    'web'
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,8 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/login/'  # 將未登入的用戶重定向到這個自定義的登入頁面
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"

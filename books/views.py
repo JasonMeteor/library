@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.template import loader
 from .models import Book
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 def books(request):
   mybooks = Book.objects.all().values()
@@ -33,6 +34,7 @@ def main(request):
   }
   return HttpResponse(template.render(context))
 
+@login_required
 def borrow(request):
   if request.method == 'POST':
     isbn = request.POST.get('ISBN', '')
@@ -55,6 +57,7 @@ def borrow(request):
 
   return render(request,'borrow.html')
 
+@login_required
 def return_book(request):
   if request.method == 'POST':
     isbn = request.POST.get('ISBN', '')

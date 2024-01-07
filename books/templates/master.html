@@ -10,9 +10,11 @@
 <link rel="stylesheet" href="{% static '/css/mainpage.css' %}">
 
 <body>
-  <div class="image-container">
-    <img class="col-sm-12 img-fluid" src={% static '/img/Alishan.png' %} alt="homepicture" style="max-height: 20rem;">
-    <h1 class="image-text text-dark mt-3" style="font-size: 50px;">阿里山森林圖書館</h1>
+  <div class="container">
+    <div class="image-container">
+      <img class="col-sm-12 img-fluid" src={% static '/img/Alishan.png' %} alt="homepicture" style="max-height: 20rem;">
+      <h1 class="image-text text-dark mt-3" style="font-size: 50px;">阿里山森林圖書館</h1>
+    </div>
   </div>
   
   <!-- 功能列表 -->
@@ -22,7 +24,7 @@
     </div>
     <div class="card-body">
       <form>
-        <a href="/" class="btn btn-linking mb-2">回首頁</a>
+        <a href="/" class="btn btn-info mb-2">回首頁</a>
       </form>
       <form>
         <a href="/borrow" class="btn btn-primary mb-2">借書</a>
@@ -37,6 +39,9 @@
       -->
       <form>
         <a href="/books" class="btn btn-warning mb-2">查詢書庫</a>
+      </form>
+      <form>
+        <a href="{% url 'login' %}" class="btn btn-linking mb-2">登入/登出</a>
       </form>
     </div>
   </div>
